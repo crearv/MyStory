@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <%- include('./partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <h1>My Story</h1>     
+        </header>
+
+        <%- include('./partials/menu'); %>
+                
+        <section class="container">
+            <div class="prompt">    
+                <h2><%= todos.title %></h2>
+                <div>
+                    <div>
+                        <p class="gras">Héros:</p>
+                        <p><%= todos.heros %></p>
+                        <p class="gras">Méchant:</p>
+                        <p><%= todos.mechant %></p>
+                        <p class="gras">Lieu:</p>
+                        <p><%= todos.lieu %></p>
+                    </div>
+                    <div>
+                        <p class="gras">Nombre de mots:</p>
+                        <p><%= todos.mots %></p>
+                        <p class="gras">Age:</p>
+                        <p><%= todos.age %></p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="histoire">    
+                <p><%= todos.histoire %></p>   
+            </div>
+
+            <div>
+                <form action="/modifier/<%= todos._id %>" method="post" class="row">
+            
+                    <input type="hidden" name="id" id="id"  value="<%= todos._id %>" />
+                    <input type="submit" value="modifier" id="modifier"/>
+                
+                </form> 
+    
+                <form action="/supprimer" method="post" class="row">
+                
+                    <input type="hidden" name="id" id="id"  value="<%= todos._id %>" />
+                    <input type="submit" value="supprimer" id="supprimer"/>
+                
+                </form> 
+            </div>
+            
+            
+        </section>
+
+        <footer>
+            <%- include('./partials/footer'); %>
+        </footer>
+    </body>
+</html>

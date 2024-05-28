@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <%- include('./partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <h1>Gestion des Stories</h1>     
+        </header>
+
+        <section class="container">
+            <div>
+
+                <form action="/story" method="post" class="row">
+            
+                    <select name="select" id="select">
+                        
+                        <% todolist.forEach(function(todo) { %>
+                            console.log(todo.title);
+                            <option><%= todo.title %></option>
+                        <% }); %>
+                        
+                    </select>
+                    <input type="submit" value="Sélectionner" id="Selectionner"/>
+                
+                </form>  
+            </div>
+            <div>
+                <button onclick = "window.location.href = '/creer'">Créer</button>
+            </div>
+
+        </section>
+
+        <footer>
+            <%- include('./partials/footer'); %>
+        </footer>
+
+    </body>
+</html>

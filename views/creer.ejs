@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <%- include('./partials/head'); %>
+    </head>
+ 
+    <body>
+        <header>
+            <h1><a href="/">Créer my Story</a></h1>
+        </header>
+
+        <%- include('./partials/menu'); %>
+        
+        <section class="container">
+            <form  action="/creer" method="post" class="row" >  
+                <fieldset>
+                    <legend>My Story</legend>
+                    <input type="text" name="titre" id="titre"  placeholder="Le titre"/>
+                    <input type="text" name="heros" id="heros"  placeholder="Le nom du ou des héros"/>
+                    <input type="text" name="mechant" id="mechant"  placeholder="Le nom du ou des méchants"/>
+                    <input type="text" name="lieu" id="lieu"  placeholder="Le lieu de l'histoire"/>
+                    <input type="number" name="mots" id="mots" min="20" placeholder="Le nombre de mots maximum"/>
+                    <input type="number" name="age" id="age" min="1" placeholder="l'âge du bébé en mois"/>
+                </fieldset>     
+                
+                <input type="submit" value="Creer"/>            
+            </form>
+        </section>
+        <footer>
+            <%- include('./partials/footer'); %>
+        </footer>
+       
+    </body>
+</html>

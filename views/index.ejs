@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <%- include('./partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <h1>Connexion</h1>     
+        </header>
+                
+        <section class="container">
+            <div>
+                <form id="connection" action='/login' method="post" class="row">
+                    <input type="text" name="mail" id="mail"  placeholder="mail"/>
+                    <input type="password" name="mdp" id="mdp"  placeholder="mot de passe"/>
+                    <input type="submit" value="Me connecter" id="connecter"/>
+                </form>  
+            </div>
+            <div>
+                <button onclick = "window.location.href = '/signup'">Créer compte</button>
+             </div>
+        </section>
+
+        <footer>
+            <%- include('./partials/footer'); %>
+        </footer>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </body>
+</html>

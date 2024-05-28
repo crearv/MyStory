@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="FR">
+    <head>
+        <%- include('./partials/head'); %>
+    </head>
+    <body>
+        <header>
+            <h1>Créer mon compte</h1>     
+        </header>
+                
+        <section class="container">
+            <div>
+                <form action="/signup" method="post" class="row">
+                    <input type="text" name="mail" id="mail"  placeholder="mail"/>
+                    <input type="password" name="mdp" id="mdp"  placeholder="mot de passe"/>
+                    <input type="submit" value="Créer compte" id="signup"/>
+                </form>  
+            </div>
+            
+        </section>
+
+        <footer>
+            <%- include('./partials/footer'); %>
+        </footer>
+
+    </body>
+</html>
